@@ -1,42 +1,13 @@
-// import { SMTPClient } from 'emailjs';
-
 class EmailReader {
+  isAuthenticated = false;
 
-    isAuthenticated = false;
+  client = null;
 
-    client = null;
-
-    authenticate(emailaddress, password) {
-
+  authenticate(emailaddress, password) {}
+  getEmail(keyword) {
+    if (this.isAuthenticated) {
     }
-    getEmail(keyword){
-        if (this.isAuthenticated) {
-
-        }
-    }
+  }
 }
 
-module.exports = EmailReader
-
-
-
-// const client = new SMTPClient({
-// 	user: 'user',
-// 	password: 'password',
-// 	host: 'smtp.your-email.com',
-// 	ssl: true,
-// });
-
-// // send the message and get a callback with an error or details of the message that was sent
-// client.send(
-// 	{
-// 		text: 'i hope this works',
-// 		from: 'you <username@your-email.com>',
-// 		to: 'someone <someone@your-email.com>, another <another@your-email.com>',
-// 		cc: 'else <else@your-email.com>',
-// 		subject: 'testing emailjs',
-// 	},
-// 	(err, message) => {
-// 		console.log(err || message);
-// 	}
-// );
+module.exports = EmailReader;

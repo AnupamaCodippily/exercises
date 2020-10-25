@@ -5,7 +5,7 @@ const { EventEmitter } = require("events");
 
 process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
 
-class GmailReader extends EmailReader {
+class OutlookReader extends EmailReader {
   server = null;
   keyword = "body";
   authEvent = new EventEmitter();
@@ -120,4 +120,4 @@ class GmailReader extends EmailReader {
   }
 }
 
-module.exports = GmailReader;
+module.exports = OutlookReader;
